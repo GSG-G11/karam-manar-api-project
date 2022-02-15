@@ -1,19 +1,24 @@
-// fetch function 
-function fetch(method, url, cb) {
+// Variables
+const advicePara = document.querySelector("#advice-para");
+
+
+// Set HTML Content Function
+const setValues = () => {
+    advicePara.textContent = generatedAdvice;
+}
+
+
+// Fetch Functions
+function fetch(method, url, cb, cbDOM) {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        cb(JSON.parse(xhr.responseText));
-        console.log(JSON.parse(xhr.responseText))
-      }
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            cb(JSON.parse(xhr.responseText));
+            cbDOM();
+        }
     };
     xhr.open(method, url);
     xhr.send();
 }
-const AdviceUrl = 'https://api.adviceslip.com/advice'
-
-const displayAdviceFun = (data) =>{
-    const advicePara = document.querySelector('#advicePara').textContent=data.slip.advice;
-}
-
-fetch('GET' ,AdviceUrl,displayAdviceFun)
+const adviceUrl = 'https://api.adviceslip.com/advice';
+fetch('GET' , adviceUrl, displayAdviceFun, setValues);
