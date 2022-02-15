@@ -2,7 +2,7 @@
 const advicePara = document.querySelector("#advice-para");
 const sticker = document.querySelector('#stiker')
 const jokePara = document.querySelector("#joke-para");
-
+const qutoPara = document.querySelector("#quto-para");
 
 
 // Set HTML Content Function
@@ -10,6 +10,7 @@ const setValues = () => {
     advicePara.textContent = generatedAdvice;
     sticker.src = generatedStiker;
     jokePara.textContent = generatedJoke;
+    qutoPara.textContent = generatedquto;
 }
 
 
@@ -20,6 +21,7 @@ function fetch(method, url, cb, cbDOM) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             cb(JSON.parse(xhr.responseText));
             cbDOM();
+            console.log(JSON.parse(xhr.responseText))
         }
     };
     xhr.open(method, url);
@@ -36,3 +38,10 @@ fetch('GET' ,StikarUrl , generatSticker ,setValues)
 
 const jokeUrl = 'https://icanhazdadjoke.com/slack';
 fetch('GET', jokeUrl, generatJoke, setValues)
+
+
+let ayah = Math.floor(Math.random() * 200) + 1   
+console.log(ayah)
+
+const ayahurl = `https://api.alquran.cloud/v1/ayah/${ayah}`
+fetch('GET', ayahurl, generatquto, setValues)

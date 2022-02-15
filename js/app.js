@@ -14,3 +14,9 @@ let generatedJoke;
 const generatJoke = (data) => {
     generatedJoke = data.attachments[0].fallback
 }
+
+let generatedquto;
+const generatquto = ({data}) => {
+    generatedquto = data.text
+}
+
