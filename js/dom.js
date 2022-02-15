@@ -1,10 +1,12 @@
 // Variables
 const advicePara = document.querySelector("#advice-para");
+const jokePara = document.querySelector("#joke-para");
 
 
 // Set HTML Content Function
 const setValues = () => {
     advicePara.textContent = generatedAdvice;
+    jokePara.textContent = generatedJoke;
 }
 
 
@@ -21,4 +23,7 @@ function fetch(method, url, cb, cbDOM) {
     xhr.send();
 }
 const adviceUrl = 'https://api.adviceslip.com/advice';
-fetch('GET' , adviceUrl, displayAdviceFun, setValues);
+fetch('GET' , adviceUrl, generatAdvice, setValues);
+
+const jokeUrl = 'https://icanhazdadjoke.com/slack';
+fetch('GET', jokeUrl, generatJoke, setValues)
