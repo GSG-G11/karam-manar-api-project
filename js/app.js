@@ -8,7 +8,8 @@ const generatAdvice = (data) =>{
 let generatedStiker;
 const generatSticker = ({data}) =>{
     generatedStiker = data.images.original.url;
-  
+}
+
 let generatedJoke;
 const generatJoke = (data) => {
     generatedJoke = data.attachments[0].fallback
