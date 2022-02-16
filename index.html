@@ -6,34 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Calling CSS Files -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 
     <!-- Page Title -->
-    <title>Document</title>
-  </head>
-  <body>
+    <title>Funny</title>
+</head>
+<body>
     <!-- Start Container -->
     <div class="container">
-      <!-- Today Advice -->
-      <p id="advice-para"></p>
-      <img id="stiker" src="" />
-      <p id="joke-para"></p>
-      <p id="quto-para"></p>
-      <iframe
-        id="iframe"
-        width="100%"
-        height="166"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src=""></iframe>
-      </div>
+        <section class="slider-sec">
+            <!-- Single Slide -->
+            <div class="single-slide active" id="first-slide">
+                <div class="slide-content">
+                    <h1 class="page-title">Welcome To Funny App</h1>
+                    <h2 class="good">Good Morning</h2>
+                    <button class="btn next-btn">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+                <!-- Floating Images -->
+                <img src="img/awesome.png" class="flt-img f-img" alt="Floating Images">
+                <img src="img/circle-like.png" class="flt-img s-img" alt="Floating Images">
+                <img src="img/heart-eyes.png" class="flt-img th-img" alt="Floating Images">
+                <img src="img/heart.png" class="flt-img fth-img" alt="Floating Images">
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-slide " id="sec-slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Advice For You</h2>
+                    <img src="img/arrow.gif" class="arrow" alt="arrow">
+                    <div class="advice">
+                        <img src="img/advice1.webp" alt="">
+                        <p id="advice-para"></p>
+                    </div>
+                    <button class="btn next-btn">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+                <img src="img/advice.gif" class="flt-img f-img" alt="">
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-slide " id="third-slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Your Status Today</h2>
+                    <img id="stiker" src="">
+                    <button class="btn next-btn">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-slide " id="fourth-slide">
+                <div class="slide-content">
+                    <h2 class="slide-title">Today's Joke</h2>
+                    <div class="advice">
+                        <img src="img/hahaha.webp" alt="hahaha">
+                        <p id="joke-para"></p>
+                    </div>
+                    <button class="btn next-btn">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+                <img src="img/jokegif.webp" class="flt-img f-img" alt="">
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-slide " id="fifth-slide">
+                <div class="slide-content">
+                    <div class="slide-content">
+                        <h2 class="slide-title">Today's Music</h2>
+                        <iframe
+                        id="iframe"
+                        width="100%"
+                        height="166"
+                        scrolling="no"
+                        frameborder="no"
+                        allow="autoplay"
+                        src=""></iframe>
+                        <button class="btn refresh">
+                            <i class="ri-refresh-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Slide -->
+            <!-- <div class="single-slide" id="sixth-slide">
+                <p id="quto-para"></p>
+            </div> -->
+        </section>
     </div>
     <!-- End Container -->
 
     <!-- Calling Js Files -->
     <script src="js/app.js"></script>
     <script src="js/dom.js"></script>
-  </body>
-</html>
+    <script src="js/front.js"></script>
+</body>
+</html> 

@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-family:'Roboto', sans-serif;
+    min-height: 100vh;
+    background: #A770EF; 
+    background: -webkit-linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
+    background: linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
+    overflow: hidden;
+}
+
+i{
+    pointer-events: none;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.flt-img{
+    position: absolute;
+    z-index: 0;
+}
+
+button, input{
+    outline: none;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.slider-sec{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.slider-sec .single-slide{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    display: none;
+    position: relative;
+}
+
+.slider-sec .single-slide.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.slide-content{
+    width: 100%;
+    text-align: center;
+}
+
+/* First Slide */
+#first-slide .slide-content{
+    text-align: center;
+}
+
+#first-slide .page-title{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+#first-slide .good{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #7a14ff;
+}
+
+.single-slide .btn{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: #B24592;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: .5s;
+}
+
+.single-slide    .btn:hover{
+    transform: scale(1.2);
+}
+
+#first-slide img.f-img{
+    top: 2%;
+    left: -5%;
+}
+
+#first-slide img.s-img{
+    bottom: 5%;
+    right: 20%;
+}
+
+#first-slide img.th-img{
+    left: 5%;
+    bottom: 20%;
+}
+
+#first-slide img.fth-img{
+    right: 4%;
+    top: 10%;
+    width: 100px;
+}
+
+
+/* Second Slide */
+
+.single-slide .slide-title{
+    text-align: center;
+    color: #FFF;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#sec-slide img.arrow{
+    position: absolute;
+    max-width: 170px;
+    display: inline-block;
+    transform: rotate(-45deg) translateY(50px);
+}
+
+#sec-slide #advice-para,
+#fourth-slide #joke-para{
+    background-color: #FFF;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin: 0 0 3rem;
+    color: #292929;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#sec-slide .advice img{
+    display: inline-block;
+    transform: translate(-100px, 4px);
+}
+
+#sec-slide .btn,
+#fourth-slide .btn{
+    margin-bottom: 7rem;
+}
+
+#sec-slide img.f-img,
+#fourth-slide img.f-img{
+    left: 10px;
+    bottom: 0;
+    width: 300px;
+    display: inline-block;
+}
+
+
+/* Third Section */
+#third-slide img{
+    max-width: 350px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+
+/* Fourth Section */
+#fourth-slide .advice img{
+    transform: translate(-100px, 15px);
+}
+
+#fourth-slide img.f-img{
+    max-width: 200px;
+    display: inline-block;
+    transform: translate(-50px, 4px);
+}
+
+/* Fifth Section */
+#fifth-slide iframe{
+    margin-bottom: 3rem;
+}
