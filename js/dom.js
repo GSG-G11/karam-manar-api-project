@@ -90,3 +90,20 @@ let refreshPage = () => {
 
 refreshBtn.addEventListener("click", refreshPage);
 
+// Add Greeting Function
+const greetingPara = document.querySelector("#greeting");
+
+const currentTime = new Date().getHours();
+let greetingText = "";
+
+if (currentTime < 12) {
+    greetingText = "Good Morning!"; 
+} else if (currentTime < 18) {
+    greetingText = "Good Afternoon!"; 
+} else {
+    greetingText = "Good Evening!"; 
+}
+
+
+greetingPara.textContent = greetingText;
+
