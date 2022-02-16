@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    font-family:'Roboto', sans-serif;
+    min-height: 100vh;
+    background: #A770EF; 
+    background: -webkit-linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
+    background: linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
+    overflow: hidden;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.flt-img{
+    position: absolute;
+    z-index: 0;
+}
+
+button, input{
+    outline: none;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.slider-sec{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.slider-sec .single-slide{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    display: none;
+    position: relative;
+}
+
+.slider-sec .single-slide.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+}
+
+.slide-content{
+    width: 100%;
+}
+
+/* First Slide */
+#first-slide .slide-content{
+    text-align: center;
+}
+
+#first-slide .page-title{
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #FFF;
+}
+
+#first-slide .good{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #7a14ff;
+}
+
+#first-slide .btn{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    background: #B24592;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: .5s;
+}
+
+#first-slide .btn:hover{
+    transform: scale(1.2);
+}
+
+#first-slide img.f-img{
+    top: 2%;
+    left: -5%;
+}
+
+#first-slide img.s-img{
+    bottom: 5%;
+    right: 20%;
+}
+
+#first-slide img.th-img{
+    left: 5%;
+    bottom: 20%;
+}
+
+#first-slide img.fth-img{
+    right: 4%;
+    top: 10%;
+    width: 100px;
+}
+
+
+/* Second Slide */
+#sec-slide #advice-para{
+    background-color: #FFF;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin: 1rem 0;
+    color: #292929;
+}
+
+#sec-slide img.f-img{
+    bottom: 0;
+    width: 350px;
+}

@@ -40,8 +40,7 @@ const jokeUrl = 'https://icanhazdadjoke.com/slack';
 fetch('GET', jokeUrl, generatJoke, setValues)
 
 
-let ayah = Math.floor(Math.random() * 200) + 1   
-console.log(ayah)
+let ayah = Math.floor(Math.random() * 200) + 1;
 
 const ayahurl = `https://api.alquran.cloud/v1/ayah/${ayah}`
 fetch('GET', ayahurl, generatquto, setValues)
