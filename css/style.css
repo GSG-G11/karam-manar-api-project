@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+i{
+    pointer-events: none;
+}
+
 img{
     max-width: 100%;
     border-radius: 3px;
@@ -58,6 +62,7 @@ button{
 
 .slide-content{
     width: 100%;
+    text-align: center;
 }
 
 /* First Slide */
@@ -77,7 +82,7 @@ button{
     color: #7a14ff;
 }
 
-#first-slide .btn{
+.single-slide .btn{
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -92,7 +97,7 @@ button{
     transition: .5s;
 }
 
-#first-slide .btn:hover{
+.single-slide    .btn:hover{
     transform: scale(1.2);
 }
 
@@ -119,15 +124,71 @@ button{
 
 
 /* Second Slide */
-#sec-slide #advice-para{
+
+.single-slide .slide-title{
+    text-align: center;
+    color: #FFF;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#sec-slide img.arrow{
+    position: absolute;
+    max-width: 170px;
+    display: inline-block;
+    transform: rotate(-45deg) translateY(50px);
+}
+
+#sec-slide #advice-para,
+#fourth-slide #joke-para{
     background-color: #FFF;
     padding: 10px 10px;
     border-radius: 3px;
-    margin: 1rem 0;
+    margin: 0 0 3rem;
     color: #292929;
+    font-size: 1.5rem;
+    text-align: left;
 }
 
-#sec-slide img.f-img{
+#sec-slide .advice img{
+    display: inline-block;
+    transform: translate(-100px, 4px);
+}
+
+#sec-slide .btn,
+#fourth-slide .btn{
+    margin-bottom: 7rem;
+}
+
+#sec-slide img.f-img,
+#fourth-slide img.f-img{
+    left: 10px;
     bottom: 0;
-    width: 350px;
+    width: 300px;
+    display: inline-block;
+}
+
+
+/* Third Section */
+#third-slide img{
+    max-width: 350px;
+    margin: 0 auto 2rem;
+    display: block;
+}
+
+
+/* Fourth Section */
+#fourth-slide .advice img{
+    transform: translate(-100px, 15px);
+}
+
+#fourth-slide img.f-img{
+    max-width: 200px;
+    display: inline-block;
+    transform: translate(-50px, 4px);
+}
+
+/* Fifth Section */
+#fifth-slide iframe{
+    margin-bottom: 3rem;
 }
