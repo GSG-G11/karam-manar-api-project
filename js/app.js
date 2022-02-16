@@ -19,4 +19,3 @@ let generatedquto;
 const generatquto = ({data}) => {
     generatedquto = data.text
 }
-
