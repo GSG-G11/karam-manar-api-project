@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
-.container{
-    font-family:'Roboto', sans-serif;
-    min-height: 100vh;
+body{
     background: #A770EF; 
     background: -webkit-linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
     background: linear-gradient(to bottom, #FDB99B, #CF8BF3, #A770EF); 
+}
+
+.container{
+    font-family:'Roboto', sans-serif;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -24,7 +27,7 @@ img{
 
 .flt-img{
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 }
 
 button, input{
@@ -166,6 +169,7 @@ button{
     bottom: 0;
     width: 300px;
     display: inline-block;
+    z-index: -1;
 }
 
 
@@ -186,6 +190,7 @@ button{
     max-width: 200px;
     display: inline-block;
     transform: translate(-50px, 4px);
+    z-index: -1;
 }
 
 /* Fifth Section */
